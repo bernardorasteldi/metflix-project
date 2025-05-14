@@ -1,0 +1,25 @@
+{% extends 'midia/base.html' %}
+{% load static %}
+{% block content %}
+<h2>Filmes</h2>
+<div class="card-container">
+    {% for item in filmes %}
+        <div class="card">
+            <strong>{{ item.titulo }}</strong>
+        </div>
+    {% empty %}
+        <p>Nenhum filme encontrado.</p>
+    {% endfor %}
+</div>
+
+<h2>Séries</h2>
+<div class="card-container">
+    {% for item in series %}
+        <div class="card">
+            <strong>{{ item.titulo }}</strong>
+        </div>
+    {% empty %}
+        <p>Nenhuma série encontrada.</p>
+    {% endfor %}
+</div>
+{% endblock %}

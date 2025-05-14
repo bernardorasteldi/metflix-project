@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+}
+.navbar {
+    background-color: #000000;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo {
+    height: 40px;
+}
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.navbar .nav-links li a {
+    color: #e50914;
+    text-decoration: none;
+    font-weight: bold;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+.card {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+}
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+form {
+    max-width: 400px;
+    margin: 20px auto;
+}
+button {
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
