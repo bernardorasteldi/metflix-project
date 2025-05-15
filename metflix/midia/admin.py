@@ -23,3 +23,7 @@ class UsuarioJogoAdmin(admin.ModelAdmin):
 @admin.register(UsuarioFilmeSerie)
 class UsuarioFilmeSerieAdmin(admin.ModelAdmin):
     list_display = ['usuario', 'filme_serie']
+    
+admin.site.site_header = "Painel Administrativo Metflix"
+admin.site.site_title = "Metflix Admin"
+admin.site.index_title = "Gerenciamento de Conteúdo da Metflix"
