@@ -13,4 +13,5 @@ urlpatterns = [
     path('register/', views.register, name='register'),
     path('adicionar_jogo/<int:jogo_id>/', views.adicionar_jogo_biblioteca, name='adicionar_jogo'),
     path('adicionar_filme/<int:filme_id>/', views.adicionar_filme_serie_biblioteca, name='adicionar_filme'),
+    path('admin/', views.admin, name='admin'),
 ]

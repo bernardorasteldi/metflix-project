@@ -14,6 +14,9 @@ def adicionar_jogo_biblioteca(request, jogo_id):
     UsuarioJogo.objects.get_or_create(usuario=request.user, jogo=jogo)
     return redirect('lista_jogos')
 
+def admin(request):
+    return redirect(request, 'admin')
+
 @login_required(login_url='login')
 def adicionar_filme_serie_biblioteca(request, filme_id):
     filme_serie = FilmeSerie.objects.get(id=filme_id)

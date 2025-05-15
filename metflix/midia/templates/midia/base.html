@@ -114,6 +114,9 @@
                     <li><a href="{% url 'lista_filmes_series' %}">Filmes e Séries</a></li>
                     <li><a href="{% url 'lista_jogos' %}">Jogos</a></li>
                     <li><a href="{% url 'biblioteca' %}">Biblioteca</a></li>
+                    {% if user.is_superuser %}
+                        <li><a href="{% url 'admin' %}">Admin</a></li>
+                    {% endif %}
                     {% if user.is_authenticated %}
                         <li><a href="{% url 'logout' %}">Sair</a></li>
                     {% else %}
