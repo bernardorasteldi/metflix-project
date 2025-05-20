@@ -42,8 +42,14 @@
      ```
 
 3. **Instale as dependências**
+
    ```bash
    pip install django
+   ```
+
+4. **Outras dependêndencias**
+   ```bash
+   pip install django-grappelli
    ```
 
 ---
