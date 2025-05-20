@@ -7,6 +7,7 @@ from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from .models import UsuarioJogo, UsuarioFilmeSerie
+from django.shortcuts import get_object_or_404, redirect
 
 @login_required(login_url='login')
 def adicionar_jogo_biblioteca(request, jogo_id):
@@ -14,14 +15,36 @@ def adicionar_jogo_biblioteca(request, jogo_id):
     UsuarioJogo.objects.get_or_create(usuario=request.user, jogo=jogo)
     return redirect('lista_jogos')
 
-def admin(request):
-    return redirect(request, 'admin')
-
 @login_required(login_url='login')
 def adicionar_filme_serie_biblioteca(request, filme_id):
     filme_serie = FilmeSerie.objects.get(id=filme_id)
     UsuarioFilmeSerie.objects.get_or_create(usuario=request.user, filme_serie=filme_serie)
     return redirect('lista_filmes_series')
+
+@login_required(login_url='login')
+def remover_jogo_biblioteca(request, jogo_id):
+    jogo = get_object_or_404(Jogo, id=jogo_id)
+    
+    UsuarioJogo.objects.filter(
+        usuario=request.user,
+        jogo=jogo
+    ).delete()
+    
+    return biblioteca(request)
+
+def admin(request):
+    return redirect(request, 'admin')
+
+@login_required(login_url='login')
+def remover_filme_serie_biblioteca(request, filme_id):
+    filme_serie = get_object_or_404(FilmeSerie, id=filme_id)
+    
+    UsuarioFilmeSerie.objects.filter(
+        usuario=request.user,
+        filme_serie=filme_serie
+    ).delete()
+    
+    return biblioteca(request)
 
 @login_required(login_url='login')
 def lista_jogos(request):

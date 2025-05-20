@@ -65,6 +65,10 @@
                 <h3>{{ jogo.nome }}</h3>
                 <p><span>Lançamento:</span> {{ jogo.data_lancamento }}</p>
                 <p><span>Preço:</span> R$ {{ jogo.preco }}</p>
+                <form method="post" action="{% url 'remover_jogo' jogo.id %}">
+                    {% csrf_token %}
+                    <button type="submit">Remover da Biblioteca</button>
+                </form>
             </div>
             {% endfor %}
         </div>
@@ -78,6 +82,10 @@
                 <h3>{{ filme.nome }}</h3>
                 <p><span>Lançamento:</span> {{ filme.data_lancamento }}</p>
                 <p><span>Gênero:</span> {{ filme.genero }}</p>
+                <form method="post" action="{% url 'remover_filme' filme.id %}">
+                    {% csrf_token %}
+                    <button type="submit">Remover da Biblioteca</button>
+                </form>
             </div>
             {% endfor %}
         </div>
