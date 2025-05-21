@@ -105,7 +105,9 @@
 <body>
     <header>
         <nav class="navbar">
-            <img src="{% static 'midia/img/logo.png' %}" alt="Metflix Logo" class="logo">
+            <a href="{% url 'dashboard' %}">
+                <img src="{% static 'midia/img/logo.png' %}" alt="Metflix Logo" class="logo">
+            </a>
             <ul class="nav-links">
                 {% if request.resolver_match.url_name == 'login' or request.resolver_match.url_name == 'register' %}
                     <li><a href="{% url 'login' %}">Entrar</a></li>

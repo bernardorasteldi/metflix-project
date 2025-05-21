@@ -1,13 +1,11 @@
-from django.shortcuts import render, redirect
-from .models import Jogo, FilmeSerie
-from django.contrib.auth import login
-from django.contrib.auth.forms import AuthenticationForm
-from .forms import UsuarioCreationForm
-from django.contrib.auth import login as auth_login
-from django.contrib.auth import logout
+from django.contrib.auth import login as auth_login, logout
 from django.contrib.auth.decorators import login_required
-from .models import UsuarioJogo, UsuarioFilmeSerie
-from django.shortcuts import get_object_or_404, redirect
+from django.contrib.auth.forms import AuthenticationForm
+from django.shortcuts import get_object_or_404, redirect, render
+
+from .forms import UsuarioCreationForm
+from .models import FilmeSerie, Jogo, UsuarioFilmeSerie, UsuarioJogo
+
 
 @login_required(login_url='login')
 def adicionar_jogo_biblioteca(request, jogo_id):
