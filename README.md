@@ -4,18 +4,18 @@
 
 ---
 
-## 👥 Desenvolvedores
+## 👥 Alunos/Desenvolvedores
 
-- Bárbara
-- Bernardo
-- Otávio
+- Bárbara Ferreira Rodrigues
+- Bernardo Rasteldi Angelo
+- Otávio Henrique Gonçalves Ribeiro
 
 ---
 
 ## 🛠️ Pré-requisitos
 
 - Python 3.x
-- virtualenv (opcional, mas recomendado)
+- virtualenv
 
 ---
 
@@ -29,6 +29,14 @@
    ```
 
 2. **Crie e ative um ambiente virtual**
+
+   - **Navegue até a pasta metflix**
+
+     ```bash
+      É importante que o ambiente virtual seja configurado na pasta que contém o manage.py. Assim, caso ainda não esteja na pasta metflix, navegue até ela a partir da raiz.
+
+      cd metflix
+     ```
 
    - **Linux / macOS**
      ```bash
@@ -44,12 +52,7 @@
 3. **Instale as dependências**
 
    ```bash
-   pip install django
-   ```
-
-4. **Outras dependêndencias**
-   ```bash
-   pip install django-grappelli
+   pip install django django-grappelli
    ```
 
 ---
