@@ -1,4 +1,4 @@
-from django.contrib.auth import login as auth_login, logout
+from django.contrib.auth import login as auth_login, logout, login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import get_object_or_404, redirect, render
