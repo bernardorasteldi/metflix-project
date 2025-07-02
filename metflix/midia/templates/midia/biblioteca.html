@@ -2,6 +2,15 @@
 {% load static %}
 
 {% block content %}
+
+{% if messages %}
+  <div class="mensagens">
+    {% for message in messages %}
+      <div class="mensagem {{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+  </div>
+{% endif %}
+
 <style>
     body {
         background-color: #141414;
@@ -51,6 +60,45 @@
 
     .card span {
         color: #e50914;
+    }
+
+    .mensagens {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    width: auto;
+    max-width: 80%;
+    text-align: center;
+    }
+
+    .mensagem {
+        background-color: #e50914;
+        color: #fff;
+        padding: 15px 25px;
+        margin: 0 auto;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 1.1rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        animation: fadeOut 5s forwards;
+        display: inline-block;
+    }
+
+    .mensagem.success {
+        background-color: #e50914;
+    }
+
+    .mensagem.info {
+        background-color: #333;
+        border: 1px solid #e50914;
+    }
+
+    @keyframes fadeOut {
+        0%   { opacity: 1; }
+        80%  { opacity: 1; }
+        100% { opacity: 0; display: none; }
     }
 </style>
 
