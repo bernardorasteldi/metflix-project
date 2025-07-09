@@ -83,4 +83,34 @@
 
 ---
 
+## 🌐 Frontend com Vue.js
+
+O frontend foi migrado para Vue 3 com Vite, e é integrado diretamente ao Django (sem uso de API).
+
+### Pré-requisitos
+
+Node.js e npm
+
+### Instalação
+
+Acesse a pasta do frontend Vue:
+
+```bash
+ cd vue_frontend
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Gere o build de produção:
+
+```bash
+npm run build
+```
+
+Os arquivos gerados serão automaticamente colocados em metflix/static/vue/ e carregados pelo Django.
+
 **Obrigado!** 🎬🚀
