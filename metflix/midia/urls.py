@@ -1,6 +1,8 @@
-from django.urls import path
+from django.urls import path, re_path
 from django.shortcuts import redirect
 from . import views
+from .views import vue_app
+
 
 urlpatterns = [
     path('jogos/', views.lista_jogos, name='lista_jogos'),
@@ -16,4 +18,9 @@ urlpatterns = [
     path('remover_jogo/<int:jogo_id>/', views.remover_jogo_biblioteca, name='remover_jogo'),
     path('remover_filme/<int:filme_id>/', views.remover_filme_serie_biblioteca, name='remover_filme'),
     path('admin/', views.admin, name='admin'),
+
+    # vue urls
+
+    path('app/', vue_app, name='vue_app'),  # rota base
+    re_path(r'^app/.*$', vue_app),          # todas as subrotas]
 ]

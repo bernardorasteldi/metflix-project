@@ -1,0 +1,51 @@
+# Ambiente virtual
+venv/
+ENV/
+env/
+.venv/
+
+# Arquivos temporários / caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.log
+*.pot
+*.pyc
+*.pyd
+*.swp
+*.swo
+.DS_Store
+.idea/
+.vscode/
+*.sqlite3
+
+# Arquivos do Django
+db.sqlite3
+*.sqlite3
+*.log
+*.pot
+*.mo
+
+# Static e media (exceto arquivos que devem ser versionados)
+staticfiles/
+media/
+metflix/static/vue/        # saída do build do Vue
+
+# Arquivos do Vue (node_modules e build)
+vue_frontend/node_modules/
+vue_frontend/dist/
+vue_frontend/.env.local
+vue_frontend/.env.*
+vue_frontend/npm-debug.log*
+vue_frontend/yarn-debug.log*
+vue_frontend/yarn-error.log*
+
+# Arquivos de sistema
+*.bak
+*.tmp
+*.orig
+*.rej
+*.sublime-workspace
+*.sublime-project
+
+

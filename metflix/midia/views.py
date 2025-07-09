@@ -133,3 +133,8 @@ def biblioteca(request):
 @login_required(login_url='login')
 def admin(request):
     return render(request, 'midia/midias.html')
+
+# Vue views
+
+def vue_app(request):
+    return render(request, 'midia/vue_app.html')
